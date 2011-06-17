@@ -1,0 +1,10 @@
+.code
+  %table.qr_table#reference_code
+    - @qr.modules.each_index do |x|
+      %tr
+        - @qr.modules.each_index do |y|
+          - if @qr.is_dark(x,y)
+            %td.qr_black{:id=>"#{y}_#{x}"}
+          - else
+            %td.qr_white{:id=>"#{y}_#{x}"}
+
