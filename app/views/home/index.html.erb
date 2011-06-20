@@ -20,19 +20,28 @@
         <!-- BEGIN OF CONTENT -->
         <div id="content">
             <div id="content_main">
-            <h1 class="title_page">QR Code</h1>
-            <h2 class="desc_title">Destroy that built in 30% ECC</h2>
-            <p class="italic-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat nulla pariatur excepteur sint occaecat cupidatat non proident,sunt in culpa quilo officia deserunt mollit anim id est laborum.</p>
+              <h1 class="title_page">One Curious QR Code Generator</h1>
+              <h2 class="desc_title">Destroy that built in 30% ECC</h2>
+              <p class="italic-text">
+              QR Codes can correct for damage, why not abuse that feature? Ease of use be damned, generate a code with your
+              custom text, then manipulate the pixels as you see fit. Draw 8 bit art, draw your logo, or add CSS styles.
+              When you're finished, double check it with your phone to ensure it scans if you try really hard, then render
+              it to canvas to save your image.
+                
+              </p>
             </div>
             <!-- BEGIN OF SIDEBAR -->
             <div id="content_right">
                 <div id="sidebar">
                 <ul>
                     <li>
-                        <h2>Our address</h2>
+                        <h2>Try it out:<h2>
                          <div class="side_box">
-                            <div id="map"></div>
-                            <p>Temporibus autem quibusdam et aut officiis debitis rerum necessitatibus saepe evenietut </p>
+                           <input type="text" id="qr_content" value="Pixel QReam">
+                           <button id="qr_generate" value="Generate">
+                           <div id="qr_container">
+                             
+                           </div>
                          </div>
                     </li>
                 </ul>

@@ -1326,3 +1326,27 @@ fieldset{
 	height:65px;
 }
 
+
+$qr_black: #000000;
+$qr_white: #ffffff;
+$highlight: #fff111;
+.qr_table{
+   display: inline;
+   border-width: 0;
+   border-style: none;
+   border-color: #0000ff;
+   border-collapse: collapse;
+    td {
+      border-width: 0;
+      border-style: none;
+      border-color: #0000ff;
+      border-collapse: collapse;
+      padding: 0;
+      margin: 0;
+      width: 10px;
+      height: 10px;
+    }
+}
+.qr_black{background-color: $qr_black;}
+.qr_white{background-color: $qr_white;}
+
