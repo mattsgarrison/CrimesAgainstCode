@@ -715,12 +715,12 @@ span.dropcap {
 	padding:30px 0px 70px 0px;
 }
 #content_main{
-	width:560px;
+	width:450px;
 	float:left;
 	padding-right:30px;
 }
 #content_right{
-	width:290px;
+	width:400px;
 	float:left;
 	padding-left:10px;
 }
@@ -1326,9 +1326,11 @@ fieldset{
 	height:65px;
 }
 
+/* QR Code Stuffs
+------------------------------------------------*/
 
 $qr_black: #000000;
-$qr_white: #ffffff;
+$qr_white: #ffffff; /* rgb(246,230,180) nice cream color */
 $highlight: #fff111;
 .qr_table{
    display: inline;
@@ -1349,4 +1351,44 @@ $highlight: #fff111;
 }
 .qr_black{background-color: $qr_black;}
 .qr_white{background-color: $qr_white;}
+
+.crossword{
+  -webkit-box-shadow: inset 1px 1px 1px 1px #000000;
+  -moz-box-shadow: inset 1px 1px 1px 1px #000000;
+  box-shadow: inset 1px 1px 1px 1px #000000;
+}
+
+.crazy_shape{
+  -moz-transform:rotate(-45deg);
+  -webkit-transform:rotate(-45deg);
+  transform:rotate(-55deg);
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+
+}
+
+.jeweled{
+  -webkit-box-shadow: inset 0px 0px 1px 1px #784078;
+  -moz-box-shadow: inset 0px 0px 1px 1px #784078;
+  box-shadow: inset 3px 3px 6px 1px #784078;
+}
+
+.go_qr_black{
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  /*box-shadow: 10px 10px 6px #888;*/
+}
+
+.go_qr_white{
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  /*box-shadow: 10px 10px 6px #888;*/
+}
 

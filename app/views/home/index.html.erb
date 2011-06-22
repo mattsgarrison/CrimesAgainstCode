@@ -19,7 +19,6 @@
         <!-- END OF TOP -->
         <!-- BEGIN OF CONTENT -->
         <div id="content">
-            <div id="content_main">
               <h1 class="title_page">One Curious QR Code Generator</h1>
               <h2 class="desc_title">Destroy that built in 30% ECC</h2>
               <p class="italic-text">
@@ -29,27 +28,43 @@
               it to canvas to save your image.
                 
               </p>
-            </div>
             <!-- BEGIN OF SIDEBAR -->
-            <div id="content_right">
                 <div id="sidebar">
                 <ul>
                     <li>
                         <h2>Try it out:<h2>
-                         <div class="side_box">
-                           <input type="text" id="qr_content" value="Pixel QReam">
-                           <button id="qr_generate" value="Generate">
+                        <div class="side_box">
+                         <form action="code.html">
+                           <input type="text" id="qr_content" name="content" value="PixelQReam.com">
+                           <button id="qr_generate" value="qr_generate">Generate Pattern</button>
                            <div id="qr_container">
                              
                            </div>
+                           <div id="qr_style">
+                             Style:
+                             <br/>
+                             <input type="radio" name="style" id="style_go" label="Game of Go">Game of Go</input><br/>
+                             <input type="radio" name="style" id="style_puzzle" label="Crossword Puzzle">Crossword Puzzle</input><br/>
+                             <input type="radio" name="style" id="style_shaped" label="Shaped Borders">Shaped Borders</input><br/>
+                             <input type="radio" name="style" id="style_jeweled" label="Jeweled">Jeweled</input><br/>
+                             <input type="radio" name="style" id="style_boring" label="Boring" checked="true">Boring</input><br/>
+                           </div>
+                          
+                           <div id="qr_colors">
+                             Dark Color:
+                             <input type="color" name="qr_dark" value="black">
+
+                             Light Color:
+                             <input type="color" name="qr_light" value="black">
+
+
+                          </form>
                          </div>
                     </li>
                 </ul>
                 </div>
-            </div>
             <!-- END OF SIDEBAR -->
             <div class="clr"></div>
-        </div>
         <!-- END OF CONTENT -->
         <!-- BEGIN OF FOOTER -->
         <div id="footer">

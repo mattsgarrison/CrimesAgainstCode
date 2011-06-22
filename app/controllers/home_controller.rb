@@ -5,9 +5,10 @@ class HomeController < ApplicationController
   end
 
   def code
+    layout = nil
     @qr = RQRCode::QRCode.new(params[:content], :size => 4)
     respond_to do |format|
-      format.html
+      format.html{render :layout => false}
       format.json{render json: @qr}
     end
   end
