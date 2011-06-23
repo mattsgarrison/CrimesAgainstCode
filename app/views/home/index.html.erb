@@ -22,11 +22,14 @@
               <h1 class="title_page">One Curious QR Code Generator</h1>
               <h2 class="desc_title">Destroy that built in 30% ECC</h2>
               <p class="italic-text">
-              QR Codes can correct for damage, why not abuse that feature? Ease of use be damned, generate a code with your
+              QR Codes correct for damage, why not abuse that feature? Ease of use be damned, generate a code with your
               custom text, then manipulate the pixels as you see fit. Draw 8 bit art, draw your logo, or add CSS styles.
-              When you're finished, double check it with your phone to ensure it scans if you try really hard, then render
-              it to canvas to save your image.
-                
+              When you're finished, double check it with your phone to ensure it can somehow scan. 
+              </p>
+              <p class="italic-text">
+              For now, it you want 
+              to save the output, take a screen shot and crop.  If this takes off I'll work on a "Save As" feature, 
+              saving each code as a link.
               </p>
             <!-- BEGIN OF SIDEBAR -->
                 <div id="sidebar">
@@ -34,11 +37,15 @@
                     <li>
                         <h2>Try it out:<h2>
                         <div class="side_box">
-                         <form action="code.html">
+                         <form id="qr_form" action="code.html">
                            <input type="text" id="qr_content" name="content" value="PixelQReam.com">
                            <button id="qr_generate" value="qr_generate">Generate Pattern</button>
                            <div id="qr_container">
-                             
+                           </div>
+                           <div id="qr_ecc_info">
+                             Altered Cells: <span id="altered_cell_count">0</span>/<span id="total_cell_count">0</span>
+                             <br/>
+                             ECC Level: <span id="ecc_level">30</span>%
                            </div>
                            <div id="qr_style">
                              Style:
@@ -49,15 +56,12 @@
                              <input type="radio" name="style" id="style_jeweled" label="Jeweled">Jeweled</input><br/>
                              <input type="radio" name="style" id="style_boring" label="Boring" checked="true">Boring</input><br/>
                            </div>
-                          
                            <div id="qr_colors">
                              Dark Color:
-                             <input type="color" name="qr_dark" value="black">
-
+                             <div id="qr_dark_colorpicker"><span>#000000</span></div>
+                             <br/>
                              Light Color:
-                             <input type="color" name="qr_light" value="black">
-
-
+                             <div id="qr_light_colorpicker"><span>#ffffff</span></div>
                           </form>
                          </div>
                     </li>
@@ -69,7 +73,6 @@
         <!-- BEGIN OF FOOTER -->
         <div id="footer">
             <div id="footer_area">
-              
               <%= link_to("Pixel QReam", controller: 'home')%>
               Copyright &copy; 2011 Matt Garrison.  All rights reserved <!-- copyright text here -->
             </div>

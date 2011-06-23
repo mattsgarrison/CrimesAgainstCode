@@ -1329,6 +1329,15 @@ fieldset{
 /* QR Code Stuffs
 ------------------------------------------------*/
 
+#qr_dark_colorpicker, #qr_light_colorpicker{
+  display: inline;
+  span{
+    cursor: pointer;
+    border: dashed 1px #d5d5d5;
+  }
+}
+
+
 $qr_black: #000000;
 $qr_white: #ffffff; /* rgb(246,230,180) nice cream color */
 $highlight: #fff111;
@@ -1338,7 +1347,7 @@ $highlight: #fff111;
    border-style: none;
    border-color: #0000ff;
    border-collapse: collapse;
-    td {
+   td {
       border-width: 0;
       border-style: none;
       border-color: #0000ff;
@@ -1347,10 +1356,16 @@ $highlight: #fff111;
       margin: 0;
       width: 10px;
       height: 10px;
-    }
+      &:hover{
+        background-color: $highlight;
+      }
+   }
+  
 }
 .qr_black{background-color: $qr_black;}
 .qr_white{background-color: $qr_white;}
+.qr_black_clicked{background-color: lighten($qr_black, 20%)}
+.qr_white_clicked{background-color: darken($qr_white, 30%)}
 
 .crossword{
   -webkit-box-shadow: inset 1px 1px 1px 1px #000000;
@@ -1361,7 +1376,7 @@ $highlight: #fff111;
 .crazy_shape{
   -moz-transform:rotate(-45deg);
   -webkit-transform:rotate(-45deg);
-  transform:rotate(-55deg);
+  transform:rotate(-45deg);
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
