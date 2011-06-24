@@ -981,6 +981,11 @@ ul.icon_contact li{
 	font-style:italic;
 	line-height:22px;
 }
+.bold-text{
+  font-size: 16px;
+  font-style:bold;
+  line-height:22px;
+}
 .title-border{
 	border-bottom:solid 1px #d1d1d1;
 	padding:0 0 10px 0;
@@ -1328,6 +1333,12 @@ fieldset{
 
 /* QR Code Stuffs
 ------------------------------------------------*/
+#qr_ecc_info{
+  margin-top: 10px;
+  text-align: center; 
+  margin-left: auto; 
+  margin-right: auto;
+}
 
 #qr_dark_colorpicker, #qr_light_colorpicker, #qr_light_edit_colorpicker, #qr_dark_edit_colorpicker{
   display: inline;

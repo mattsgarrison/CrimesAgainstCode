@@ -1,84 +1,73 @@
 <div id="container">
     <div id="main">
-        <!-- BEGIN OF TOP -->
         <div id="top_alt">
             <div id="top_area_alt">
-                <!-- BEGIN OF LOGO -->
                 <div id="logo">
-                  <%= link_to("Pixel QReam", controller: 'home')%>
+                  <%= link_to("Crimes Against Code", controller: 'home')%>
                 </div>
-                <!-- END OF LOGO -->
-                <!-- BEGIN OF MAINMENU -->
                 <div id="mainmenu_alt">
                     <ul id="menu2">
                     </ul>
                 </div>
-                <!-- END OF MAINMENU -->
             </div>
         </div>
-        <!-- END OF TOP -->
-        <!-- BEGIN OF CONTENT -->
         <div id="content">
               <h1 class="title_page">One Curious QR Code Generator</h1>
-              <h2 class="desc_title">Destroy that built in 30% ECC</h2>
+              <h2 class="desc_title">Destroy that built in 30% error correction.</h2>
               <p class="italic-text">
-              QR Codes correct for damage, why not abuse that feature? Ease of use be damned, generate a code with your
-              custom text, then manipulate the pixels as you see fit. Draw 8 bit art, draw your logo, or add CSS styles.
-              When you're finished, double check it with your phone to ensure it can somehow scan. 
+              Design <span class="bold-text">really</span> custom QR Codes. They can correct for damage and errors, why not abuse that feature? Ease of 
+              scanning be damned, manipulate those pixels as you see fit. Draw 8 bit art, draw a logo, 
+              or choose a predefined style. When you're finished, double check it with your phone to ensure it can somehow scan if you hold it just right.
               </p>
               <p class="italic-text">
-              For now, it you want 
-              to save the output, take a screen shot and crop.  If this takes off I'll work on a "Save As" feature, 
-              saving each code as a link.
+              For now, it you want to save the output, take a screenshot and crop. I'm working on adding 
+              a save feature so you can more readily distribute your work of art, so keep in touch.
               </p>
-            <!-- BEGIN OF SIDEBAR -->
-                <div id="sidebar">
-                <ul>
-                    <li>
-                        <h2>Try it out:<h2>
-                        <div class="side_box">
-                         <form id="qr_form" action="code.html">
-                           <input type="text" id="qr_content" name="content" value="PixelQReam.com" maxlength="33" >
-                           <button id="qr_generate" value="qr_generate">Generate Pattern</button>
-                           <div id="qr_container">
-                           </div>
-                           <div id="qr_ecc_info">
-                             Altered Cells: <span id="altered_cell_count">0</span>/<span id="total_cell_count">0</span>
-                             <%# ECC Level: <span id="ecc_level">30</span>%>
-                           </div>
-                           <div id="qr_style">
-                             Style:
-                             <br/>
-                             <input type="radio" name="style" id="style_go" label="Game of Go">Game of Go</input><br/>
-                             <input type="radio" name="style" id="style_puzzle" label="Crossword Puzzle">Crossword Puzzle</input><br/>
-                             <input type="radio" name="style" id="style_shaped" label="Cross Stitch">Cross Stitch</input><br/>
-                             <input type="radio" name="style" id="style_jeweled" label="Footballs">Footballs</input><br/>
-                             <input type="radio" name="style" id="style_boring" label="Boring" checked="true">Boring</input><br/>
-                           </div>
-                           <div id="qr_colors">
-                             Dark Colors:
-                             <div id="qr_dark_colorpicker"><span>#000000</span></div>
-                             <div id="qr_dark_edit_colorpicker"><span>#333333</span></div>
-                             <br/>
-                             Light Colors:
-                             <div id="qr_light_colorpicker"><span>#ffffff</span></div>
-                             <div id="qr_light_edit_colorpicker"><span>#b3b3b3</span></div>
-                          </form>
-                         </div>
-                    </li>
-                </ul>
+              <hr class="content-line">
+              <h5 class="italic-text">Warning: This is a trial and error tool. I'm doing very little to prevent you from breaking the QR code entirely. The cross stitch style
+              is also sort of fragile and I'm aware of a few bugs in the editing code, but feel free to send me feedback!</h5><br>
+              <form id="qr_form" action="code.html">
+              <div class="col-430">
+                <div id="qr_container"></div>
+                <div id="qr_ecc_info">
+                  <h3>Altered Cells: <span id="altered_cell_count">0</span>/<span id="total_cell_count">0</span></h3>
+                 <%# ECC Level: <span id="ecc_level">30</span>%>
                 </div>
-            <!-- END OF SIDEBAR -->
+                <div id="qr_style">
+                  <h4>Style:</h4>
+                    <br/>
+                    <input type="radio" name="style" id="style_go" label="Game of Go">Game of Go</input><br/>
+                    <input type="radio" name="style" id="style_puzzle" label="Crossword Puzzle">Crossword Puzzle</input><br/>
+                    <input type="radio" name="style" id="style_shaped" label="Cross Stitch">Cross Stitch</input><br/>
+                    <input type="radio" name="style" id="style_jeweled" label="Footballs">Footballs</input><br/>
+                    <input type="radio" name="style" id="style_boring" label="Boring" checked="true">Boring</input><br/>
+                </div>
+              </div>
+              <div class="col-430-last">
+                <div id="qr_input">
+                <input type="text" id="qr_content" name="content" value="crimesagainstcode.com" maxlength="33" size="33"><br/>
+                <h3><span id="qr_generate" class="button" href="#">Generate Pattern</span></h3>
+                </div>
+                 <div id="qr_colors">
+                    <h4>Dark Colors:</h4>
+                    <div id="qr_dark_colorpicker"><h4><span>#000000</span></h4></div>
+                      <div id="qr_dark_edit_colorpicker"><h4><span>#333333</span></h4></div>
+                    <br/>
+                    <h4>Light Colors:</h4>
+                    <div id="qr_light_colorpicker"><h4><span>#ffffff</span></h4></div>
+                    <div id="qr_light_edit_colorpicker"><h4><span>#b3b3b3</span></h4></div>
+                  </div>
+              </div>
+              </form>
+        </div>
+
             <div class="clr"></div>
-        <!-- END OF CONTENT -->
-        <!-- BEGIN OF FOOTER -->
         <div id="footer">
             <div id="footer_area">
-              <%= link_to("Pixel QReam", controller: 'home')%>
-              Copyright &copy; 2011 Matt Garrison.  All rights reserved <!-- copyright text here -->
+              <%= link_to("Crimes Against Code", controller: 'home')%>
+              Copyright &copy; 2011 <%= mail_to('matt@crimesagainstcode.com','Matt Garrison')%>.  All rights reserved <!-- copyright text here -->
             </div>
         </div>
-        <!-- END OF FOOTER -->
     </div>
     <div id="bottom_ridge"></div>
 </div>

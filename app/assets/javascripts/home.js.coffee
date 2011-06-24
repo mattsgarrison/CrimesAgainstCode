@@ -123,14 +123,21 @@ jQuery ->
     clearQrStyles()
     $('td.qr_black').each ->
       $(this).addClass 'crazy_shape'
-    $('td.qr_black_clicked').each ->
-      $(this).addClass 'crazy_shape'
-
+    #$('td.qr_black_clicked').each ->
+    #  $(this).removeClass 'crazy_shape'
+    #$('td.qr_white').each ->
+    #  $(this).addClass 'crazy_shape'
+    $('td.qr_white_clicked').each ->
+      $(this).removeClass 'crazy_shape'
   $('#style_jeweled').click ->
     clearQrStyles()
     $('td.qr_black').each ->
       $(this).addClass 'jeweled'
     $('td.qr_black_clicked').each ->
+      $(this).addClass 'jeweled'
+    $('td.qr_white').each ->
+      $(this).addClass 'jeweled'
+    $('td.qr_white_clicked').each ->
       $(this).addClass 'jeweled'
 
   $('#style_boring').click ->
