@@ -7,3 +7,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+
+
+//Extends jQuery to check for selectors that return nothing
+$.fn.exists = function () {
+  return $(this).length !== 0;
+}
+
+

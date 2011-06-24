@@ -1329,7 +1329,7 @@ fieldset{
 /* QR Code Stuffs
 ------------------------------------------------*/
 
-#qr_dark_colorpicker, #qr_light_colorpicker{
+#qr_dark_colorpicker, #qr_light_colorpicker, #qr_light_edit_colorpicker, #qr_dark_edit_colorpicker{
   display: inline;
   span{
     cursor: pointer;
@@ -1384,9 +1384,12 @@ $highlight: #fff111;
 }
 
 .jeweled{
-  -webkit-box-shadow: inset 0px 0px 1px 1px #784078;
-  -moz-box-shadow: inset 0px 0px 1px 1px #784078;
-  box-shadow: inset 3px 3px 6px 1px #784078;
+   -moz-border-radius-topleft: 4px;
+   -moz-border-radius-topright: 0px;
+   -moz-border-radius-bottomright: 5px;
+   -moz-border-radius-bottomleft: 0px;
+   -webkit-border-radius: 4px 0px 5px 0px;
+   border-radius: 8px 0px 8px 0px;
 }
 
 .go_qr_black{
