@@ -33,21 +33,13 @@
                   <h3>Altered Cells: <span id="altered_cell_count">0</span>/<span id="total_cell_count">0</span></h3>
                  <%# ECC Level: <span id="ecc_level">30</span>%>
                 </div>
-                <div id="qr_style">
-                  <h4>Style:</h4>
-                    <br/>
-                    <input type="radio" name="style" id="style_go" label="Game of Go">Game of Go</input><br/>
-                    <input type="radio" name="style" id="style_puzzle" label="Crossword Puzzle">Crossword Puzzle</input><br/>
-                    <input type="radio" name="style" id="style_shaped" label="Cross Stitch">Cross Stitch</input><br/>
-                    <input type="radio" name="style" id="style_jeweled" label="Footballs">Footballs</input><br/>
-                    <input type="radio" name="style" id="style_boring" label="Boring" checked="true">Boring</input><br/>
-                </div>
               </div>
               <div class="col-430-last">
                 <div id="qr_input">
-                <input type="text" id="qr_content" name="content" value="crimesagainstcode.com" maxlength="33" size="33"><br/>
-                <h3><span id="qr_generate" class="button" href="#">Generate Pattern</span></h3>
-                </div>
+                  <label for="content"><h4>Encode:</h4></label>
+                  <input type="text" id="qr_content" name="content" value="crimesagainstcode.com" maxlength="33" size="33">
+                  <h3><span id="qr_generate" class="button" href="#">Generate Pattern</span></h3>
+                </div><br>
                  <div id="qr_colors">
                     <h4>Dark Colors:</h4>
                     <div id="qr_dark_colorpicker"><h4><span>#000000</span></h4></div>
@@ -56,6 +48,15 @@
                     <h4>Light Colors:</h4>
                     <div id="qr_light_colorpicker"><h4><span>#ffffff</span></h4></div>
                     <div id="qr_light_edit_colorpicker"><h4><span>#b3b3b3</span></h4></div>
+                  </div>
+                  <div id="qr_style">
+                    <h4>Style:</h4>
+                      <br/>
+                      <input type="radio" name="style" id="style_go" label="Game of Go">Game of Go</input><br/>
+                      <input type="radio" name="style" id="style_puzzle" label="Crossword Puzzle">Crossword Puzzle</input><br/>
+                      <input type="radio" name="style" id="style_shaped" label="Cross Stitch">Cross Stitch</input><br/>
+                      <input type="radio" name="style" id="style_jeweled" label="Footballs">Footballs</input><br/>
+                      <input type="radio" name="style" id="style_boring" label="Boring" checked="true">Boring</input><br/>
                   </div>
               </div>
               </form>

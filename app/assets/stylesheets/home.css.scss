@@ -1,5 +1,5 @@
 /*----------------------------------------------------
-Metro Site - CSS File
+Crimes Against Code CSS
 ------------------------------------------------------*/
 
 @import url(http://fonts.googleapis.com/css?family=Damion&v1);
@@ -1322,8 +1322,7 @@ fieldset{
 	font-size:11px
 }
 
-#footer_area{
-	background-image:url(../assets/bg-bottom.gif);
+#footer_area{	background-image:url(../assets/bg-bottom.gif);
 	background-repeat:no-repeat;
 	background-position:left bottom;
 	padding:5px 0 0 0;
@@ -1339,7 +1338,9 @@ fieldset{
   margin-left: auto; 
   margin-right: auto;
 }
-
+#qr_style{ margin: 10px 0px 10px 15px; float:left; }
+#qr_colors{margin: 10px; float:left;}
+#qr_input{height: 100px;}
 #qr_dark_colorpicker, #qr_light_colorpicker, #qr_light_edit_colorpicker, #qr_dark_edit_colorpicker{
   display: inline;
   span{
@@ -1352,7 +1353,7 @@ fieldset{
 $qr_black: #000000;
 $qr_white: #ffffff; /* rgb(246,230,180) nice cream color */
 $highlight: #fff111;
-.qr_table{
+.qr_table {
    display: inline;
    border-width: 0;
    border-style: none;
@@ -1371,8 +1372,8 @@ $highlight: #fff111;
         background-color: $highlight;
       }
    }
-  
 }
+
 .qr_black{background-color: $qr_black;}
 .qr_white{background-color: $qr_white;}
 .qr_black_clicked{background-color: lighten($qr_black, 20%)}
