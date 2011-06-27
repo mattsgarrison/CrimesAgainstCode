@@ -5,7 +5,7 @@ ecc = 0.30
 jQuery ->
   # Calculate initial values
 
-  mpmetrics.track("Main Page Load")
+  mpmetrics.track("View Main Page")
   ecc = 0.30
   updateCount(altered_cells)
 
@@ -25,7 +25,7 @@ jQuery ->
         $(this).css('backgroundColor', '#'+hex)
       $('#qr_dark_colorpicker span').html('#'+hex)
       $('#qr_dark_colorpicker span').css('backgroundColor', '#'+hex)
-
+      mpmetrics.track("Dark color changed")
   })
   $('#qr_dark_colorpicker span').css('backgroundColor', '#000000')
 
@@ -44,6 +44,7 @@ jQuery ->
       $('.qr_table tbody').css('backgroundColor', '#'+hex)
       $('#qr_light_colorpicker span').html('#'+hex)
       $('#qr_light_colorpicker span').css('backgroundColor', '#'+hex)
+      mpmetrics.track("Light color changed")
   })
   $('#qr_light_colorpicker span').css('backgroundColor', '#ffffff')
 
@@ -60,7 +61,7 @@ jQuery ->
         $(this).css('backgroundColor', '#'+hex)
       $('#qr_dark_edit_colorpicker span').html('#'+hex)
       $('#qr_dark_edit_colorpicker span').css('backgroundColor', '#'+hex)
-
+      mpmetrics.track("Dark-edit color changed")
   })
   $('#qr_dark_edit_colorpicker span').css('backgroundColor', '#333333')
 
@@ -76,10 +77,10 @@ jQuery ->
     onChange: (hsb, hex, rgb) ->
       $('td.qr_white_clicked').each ->
         $(this).css('backgroundColor', '#'+hex)
-
       $('.qr_table tbody').css('backgroundColor', '#'+hex)
       $('#qr_light_edit_colorpicker span').html('#'+hex)
       $('#qr_light_edit_colorpicker span').css('backgroundColor', '#'+hex)
+      mpmetrics.track("Light-edit color changed")
   })
   $('#qr_light_edit_colorpicker span').css('backgroundColor', '#b3b3b3')
 
@@ -111,7 +112,7 @@ jQuery ->
       $(this).addClass 'go_qr_black'
     $('td.qr_white_clicked').each ->
       $(this).addClass 'go_qr_white'
-
+    mpmetrics.track("Go Style chosen")
   $('#style_puzzle').click ->
     clearQrStyles()
     $('td.qr_black').each ->
@@ -122,7 +123,7 @@ jQuery ->
       $(this).addClass 'crossword'
     $('td.qr_white_clicked').each ->
       $(this).addClass 'crossword'
-
+    mpmetrics.track("Crossword Style chosen")
   $('#style_shaped').click ->
     clearQrStyles()
     $('td.qr_black').each ->
@@ -133,6 +134,7 @@ jQuery ->
       $(this).removeClass 'crazy_shape'
     $('td.qr_white_clicked').each ->
       $(this).removeClass 'crazy_shape'
+    mpmetrics.track("Cross Stitch Style chosen")
   $('#style_jeweled').click ->
     clearQrStyles()
     $('td.qr_black').each ->
@@ -143,10 +145,12 @@ jQuery ->
       $(this).addClass 'jeweled'
     $('td.qr_white_clicked').each ->
       $(this).addClass 'jeweled'
+    mpmetrics.track("Football Style chosen")
 
   $('#style_boring').click ->
     console.log 'clear style classes'
     clearQrStyles()
+    mpmetrics.track("Boring Style chosen") 
 
 clearQrStyles = ->
   console.log 'clearing styles'
