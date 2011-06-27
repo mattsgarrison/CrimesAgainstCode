@@ -148,12 +148,12 @@ jQuery ->
     mpmetrics.track("Football Style chosen")
 
   $('#style_boring').click ->
-    console.log 'clear style classes'
+    #console.log 'clear style classes'
     clearQrStyles()
     mpmetrics.track("Boring Style chosen") 
 
 clearQrStyles = ->
-  console.log 'clearing styles'
+  #console.log 'clearing styles'
   $('table.qr_table td').each ->
     $(this).removeClass 'go_qr_white'
     $(this).removeClass 'go_qr_black'
@@ -216,7 +216,7 @@ generate =
     $.post 'code.html',
            content: $('#qr_content').val()
            (data) ->
-             console.log('qr post success')
+             #console.log('qr post success')
              $('#qr_container').html(data)
              addCellClicks()
              data_cells = $('#qr_container td').size()
