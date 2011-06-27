@@ -4,6 +4,8 @@ ecc = 0.30
 
 jQuery ->
   # Calculate initial values
+
+  mpmetrics.track("Main Page Load")
   ecc = 0.30
   updateCount(altered_cells)
 
@@ -97,6 +99,8 @@ jQuery ->
     altered_cells = 0
     updateCount(altered_cells)
     $('#style_boring').attr('checked', true)
+    mpmetrics.track("Generated new code")
+
   $('#style_go').click ->
     clearQrStyles()
     $('td.qr_black').each ->

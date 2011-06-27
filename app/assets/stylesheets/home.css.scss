@@ -1338,9 +1338,13 @@ fieldset{
   margin-left: auto; 
   margin-right: auto;
 }
-#qr_style{ margin: 10px 0px 10px 15px; float:left; }
-#qr_colors{margin: 10px; float:left;}
+#qr_content{float: left; margin-left: 10px; margin-right: 10px; background: transparent;
+  font-family: 'Arvo', Arial, Helvetica, sans-serif; font-size: 13px; line-height: 30px;}
+#qr_generate{height:14px; width:125px;}
+#qr_style{ margin: 10px 15px 10px 15px; float:left; }
+#qr_colors{margin: 10px; float:left;border-left: 2px solid #c9c9c9; padding-left: 20px;}
 #qr_input{height: 100px;}
+#qr_radio{}
 #qr_dark_colorpicker, #qr_light_colorpicker, #qr_light_edit_colorpicker, #qr_dark_edit_colorpicker{
   display: inline;
   span{

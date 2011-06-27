@@ -14,17 +14,16 @@
         <div id="content">
               <h1 class="title_page">One Curious QR Code Generator</h1>
               <h2 class="desc_title">Destroy that built in 30% error correction.</h2>
-              <p class="italic-text">
+              <p class="italic-text col-430">
               Design <span class="bold-text">really</span> custom QR Codes. They can correct for damage and errors, why not abuse that feature? Ease of 
               scanning be damned, manipulate those pixels as you see fit. Draw 8 bit art, draw a logo, 
               or choose a predefined style. When you're finished, double check it with your phone to ensure it can somehow scan if you hold it just right.
               </p>
-              <p class="italic-text">
+              <p class="italic-text col-430-last">
               For now, it you want to save the output, take a screenshot and crop. I'm working on adding 
               a save feature so you can more readily distribute your work of art, so keep in touch.
               </p>
               <hr class="content-line">
-              <h5 class="italic-text">Warning: This is a trial and error tool. I'm doing very little to prevent you from breaking the QR code entirely. I'm aware of a few bugs in the editing code, but feel free to send me feedback!</h5><br>
               <form id="qr_form" action="code.html">
               <div class="col-430">
                 <div id="qr_container"></div>
@@ -35,10 +34,19 @@
               </div>
               <div class="col-430-last">
                 <div id="qr_input">
-                  <label for="content"><h4>Encode:</h4></label>
+                  <label for="content" style="float: left"><h4>Encode:</h4></label><br><br>
                   <input type="text" id="qr_content" name="content" value="crimesagainstcode.com" maxlength="33" size="33">
                   <h3><span id="qr_generate" class="button" href="#">Generate Pattern</span></h3>
                 </div><br>
+                  <div id="qr_style">
+                    <h4>Style:</h4>
+                      <br/>
+                      <input type="radio" name="style" class="qr_radio" id="style_go"/>Game of Go</label><br/>
+                      <input type="radio" name="style" class="qr_radio" id="style_puzzle" label="Crossword Puzzle">Crossword Puzzle</input><br/>
+                      <input type="radio" name="style" class="qr_radio" id="style_shaped" label="Cross Stitch">Cross Stitch (buggy)</input><br/>
+                      <input type="radio" name="style" class="qr_radio" id="style_jeweled" label="Footballs">Footballs</input><br/>
+                      <input type="radio" name="style" class="qr_radio" id="style_boring" label="Boring" checked="true">Boring</input><br/>
+                  </div>
                  <div id="qr_colors">
                     <h4>Dark Colors:</h4>
                     <div id="qr_dark_colorpicker"><h4><span>#000000</span></h4></div>
@@ -48,19 +56,11 @@
                     <div id="qr_light_colorpicker"><h4><span>#ffffff</span></h4></div>
                     <div id="qr_light_edit_colorpicker"><h4><span>#b3b3b3</span></h4></div>
                   </div>
-                  <div id="qr_style">
-                    <h4>Style:</h4>
-                      <br/>
-                      <input type="radio" name="style" id="style_go" label="Game of Go">Game of Go</input><br/>
-                      <input type="radio" name="style" id="style_puzzle" label="Crossword Puzzle">Crossword Puzzle</input><br/>
-                      <input type="radio" name="style" id="style_shaped" label="Cross Stitch">Cross Stitch (buggy)</input><br/>
-                      <input type="radio" name="style" id="style_jeweled" label="Footballs">Footballs</input><br/>
-                      <input type="radio" name="style" id="style_boring" label="Boring" checked="true">Boring</input><br/>
-                  </div>
               </div>
               </form>
         </div>
 
+              <h5 class="italic-text">Warning: This is a trial and error tool. I'm doing very little to prevent you from breaking the QR code entirely. I'm aware of a few bugs in the editing code, but feel free to send me feedback!</h5><br>
             <div class="clr"></div>
         <div id="footer">
             <div id="footer_area">
