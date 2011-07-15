@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-PixelQream::Application.load_tasks
+CrimesAgainstCode::Application.load_tasks

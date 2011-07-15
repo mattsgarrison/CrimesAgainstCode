@@ -1,4 +1,4 @@
-PixelQream::Application.routes.draw do
+CrimesAgainstCode::Application.routes.draw do
   get "home/index"
 
   match "home/code"
