@@ -7,7 +7,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "should get code" do
-    get :code
+    get(:code,{'content'=>'blue'} )
     assert_response :success
   end
 
