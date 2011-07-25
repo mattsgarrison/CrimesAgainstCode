@@ -1,0 +1,91 @@
+#container
+  #main
+    #top_alt
+      #top_area_alt
+        #logo
+          = link_to("Crimes Against Code", controller: 'home')
+        #mainmenu_alt
+          %ul#menu2
+    %content
+      %h1.title_page One Curious QR Code Generator
+      %h2.desc_title Destroy that built in 30% error correction
+      %p.italic-text.col-430
+        Design 
+        %span.bold-text really
+        custom QR Codes. They can correct for damage and errors, why not abuse that feature? Ease of 
+        scanning be damned, manipulate those pixels as you see fit. Draw 8 bit art, draw a logo, 
+        or choose a predefined style. When you're finished, double check it with your phone to ensure it can somehow scan if you hold it just right.
+      %p.italic-text.col-430-last
+        For now, it you want to save the output, take a screenshot and crop. I'm working on adding 
+        a save feature so you can more readily distribute your work of art, so keep in touch.
+      %hr.content-line
+      %form#qr_form{:action => "code.html"}
+        .col-430
+          #qr_container
+          #qr_ecc_info
+            %h3 
+              Altered Cells:
+              %span#altered_cell_count
+                0
+              #{"/"}
+              %span#total_cell_count
+                0
+              -# ECC Level: <span id="ecc_level">30</span>
+        .col-430-last
+          #qr_input
+            %label{:for => "content", :style => "float: left"}
+              %h4 Encode:
+              %br
+              %br
+            %input#qr_content{:type => "text", :name => "content", :value =>"crimesagainstcode.com", :maxlength =>"33", :size => "33"}
+            %h3
+              %span#qr_generate.button Generate Pattern
+          #qr_style
+            %h4
+              Style
+              %br
+              %input#style_go.qr_radio{:type=>"radio", :name =>"style", :label=>"Game of Go"} 
+                Game of Go
+              %br
+              %input#style_puzzle.qr_radio{:type=>"radio", :name => "style", :label=>"Crossword Puzzle"} 
+                Crossword Puzzle
+              %br
+              %input#style_shaped.qr_radio{:type=>"radio", :name=>"style", :label=>"Cross Stitch"}
+                Cross Stitch (buggy)
+              %br
+              %input#style_jeweled.qr_radio{:type=>"radio", :name=>"style", :label=> "Footballs"}
+                Footballs
+              %br
+              %input#style_boring.qr_radio{:type=>"radio", :name=> "style", :label=>"Boring"}
+                Boring
+              %br
+          #qr_colors
+            %h4 
+              Dark Colors:
+              #qr_dark_colorpicker
+                %h4
+                  %span #000000
+              #qr_dark_edit_colorpicker
+                %h4
+                  %span #333333
+            %br
+            %h4 
+              Light Colors:
+              #qr_light_colorpicker
+                %h4
+                  %span #ffffff
+              #qr_light_edit_colorpicker
+                %h4
+                  %span #b3b3b3
+        %h5.italic-text Warning: This is a trial and error tool. I'm doing very little to prevent you from breaking the QR code entirely. I'm aware of a few bugs in the editing code, but feel free to send me feedback!
+        %br
+        .clr
+    #footer
+      #footer_area
+        = link_to("Crimes Against Code", controller: 'home')
+        Copyright &copy; 2011 
+        = mail_to('matt@crimesagainstcode.com','Matt Garrison')
+        All rights reserved.
+  #bottom_ridge
+
+

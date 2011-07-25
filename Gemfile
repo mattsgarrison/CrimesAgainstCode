@@ -18,7 +18,8 @@ gem 'jquery-rails'
 gem 'thin'
 gem 'haml'
 gem 'rqrcode'
-
+gem 'compass'
+gem 'bourbon'
 # Use unicorn as the web server
 # gem 'unicorn'
 
