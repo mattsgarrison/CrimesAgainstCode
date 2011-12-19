@@ -31,7 +31,7 @@ default_run_options[:pty] = true  # Forgo errors when deploying from windows
 # if you're still using the script/reaper helper you will need
 # these http://github.com/rails/irs_process_scripts
 
-after :deploy, "deploy:migrate"
+#after :deploy, "deploy:migrate"
 
 # If you are using Passenger mod_rails uncomment this:
 namespace :deploy do
